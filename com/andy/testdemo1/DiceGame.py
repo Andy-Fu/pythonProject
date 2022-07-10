@@ -8,6 +8,7 @@ import random
 import sys
 import tkinter
 
+button:tkinter.Button
 input:tkinter.Entry
 stake:tkinter.Entry
 deposit:tkinter.Entry
@@ -74,6 +75,7 @@ def getDepositValue():
         depositValue = int(depositValue)
         totleMoney+=depositValue
         print(f"充值成功，账户余额：{totleMoney}")
+        deposit.delete(0, "end")
         return True
     except Exception as e:
         print("输入有误！")
@@ -81,9 +83,10 @@ def getDepositValue():
         return False
 
 def clickStart():
-    global input,stake,totleMoney
+    global input,stake,totleMoney,button
     inputValue = input.get()
     stakeValue = stake.get()
+    button.focus_force()
     if inputValue == '' or stakeValue == '':
         print("请输入！")
         return
@@ -105,7 +108,7 @@ def clickStart():
 
 
 def mainView():
-    global input,stake,deposit,depositVar,inputvar,stakeVar
+    global input,stake,deposit,depositVar,inputvar,stakeVar,button
     window = tkinter.Tk()
     inputvar = tkinter.StringVar()
     stakeVar = tkinter.StringVar()
@@ -133,4 +136,4 @@ def mainRoot():
 
 
 if __name__ == '__main__':
-    mainView()
+    mainRoot()
