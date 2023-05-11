@@ -32,6 +32,7 @@ class LoopDemo:
     def forLoopTest(self):
         count = 10
         guest_list = ['曾彬', '吴晨', '严涛', '李伟', '秦云', '王娟', '赵秀荣', '曹秀华', '程玲', '商娜']
+        
         for index, item in enumerate(guest_list):
             print(f"现在循环第{index}次:{item}")
 
