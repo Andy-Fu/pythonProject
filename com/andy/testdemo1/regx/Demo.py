@@ -21,6 +21,7 @@ test_data = [
     "automation trigger:revert to last version test",
     "automation trigger:revert to last version",
     "test MR3 fhiogsdfghsh gdgdhg",
+    "test MR#2  fhiogsdfghsh gdgdhg",
 ]
 
 # 遍历测试数据并进行匹配
