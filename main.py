@@ -65,6 +65,10 @@ def testValue():
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
+    str111 = "qqqqqqqq"
+    str111 = ",".join(str111)
+    print(str111)
+
     print_hi('PyCharm')
     a = True
     b = 10

@@ -17,8 +17,9 @@ def fun_timer():
     positionX, positionY = pyautogui.position()
     size = pyautogui.size()
     pyautogui.moveTo(random.randint(0, size.width), random.randint(0, size.height))
+    pyautogui.hotkey('alt','tab')
     print(f"{positionX},{positionY}")
-    timer = threading.Timer(5, fun_timer)
+    timer = threading.Timer(30, fun_timer)
     timer.start()
 
 
